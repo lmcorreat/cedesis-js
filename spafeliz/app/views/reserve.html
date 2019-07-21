@@ -1,0 +1,13 @@
+<ui-view></ui-view>
+<form novalidate>
+  Servicio:<br>
+  <input type="text" ng-model="rsvCtrl.user"><br>
+  Precio:<br>
+  <input type="text" ng-model="rsvCtrl.user">
+  <br><br>
+  <button ng-click="rsvCtrl.reserve()">Reservar</button>
+  <br><br>
+  <div class="alert alert-success" role="alert" ng-show="rsvCtrl.showMsg">
+    {{rsvCtrl.msgOk}}
+  </div>
+</form>
