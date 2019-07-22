@@ -24,6 +24,7 @@ app.use('/', indexRouter);//cualquier ruta que llegue por / entra por indexRoute
 app.use('/users', usersRouter);
 
 app.use('/services',servicesRouter);
+app.use('/services/:id',servicesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

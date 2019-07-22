@@ -22,5 +22,15 @@ exports.services_all_get = function(req,res){
 
 //express, dispone del request, response
 exports.services_detail_get = function(req,res){
-  res.send(' devuelve todos los servicios del spa por id '+req.params.id);
+  console.log(req);
+  serviceModel.findById(req.params.id,{
+    attributes:['id','name','description','happy']  
+  })
+  .then(data => {
+    res.json(data);
+    //por defecto devuelve el code estatus 200 - ok
+  })
+  .catch(err => {
+    res.status(500).send('Error ');
+  });
 }
