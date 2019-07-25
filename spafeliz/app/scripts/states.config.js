@@ -30,7 +30,7 @@ function settings($stateProvider){
 
   var reserveState = {
     name:'home.reserve',//se deben cambiar las referencias tambien
-    url:'/reserve/:foo?bar',
+    url:'/reserve/{id}',
     templateUrl:'views/reserve.html',
     controller:'ReserveCtrl as rsvCtrl'
   }

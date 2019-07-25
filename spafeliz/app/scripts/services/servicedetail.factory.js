@@ -10,9 +10,9 @@
 angular.module('spafelizApp')
   .factory('serviceDetail',serviceDetail);
 
-serviceDetail.$inject = [];
+serviceDetail.$inject = ['spaServicesHttp'];
 
-function serviceDetail() {
+function serviceDetail(spaServicesHttp) {
   var dataDetail = [
     {name:'Masaje sencillo', cost:'60.000',description:'30 min de un genial masaje',
     endHappy:false,descuento:'3000'},
@@ -26,12 +26,17 @@ function serviceDetail() {
 
   var services = {
     //clave:valor -> llave como se identifica, y su funcion
-    getDetail : getDetailMethod
+    getDetail : getDetailMethod,
+    getByIdService : getByIdMethod
   }
 
   return services;
 
   function getDetailMethod(){
     return dataDetail;
+  }
+
+  function getByIdMethod(){
+    spaServicesHttp.getById();
   }
 }

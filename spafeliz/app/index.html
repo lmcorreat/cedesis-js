@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="spafelizApp">
+  <body ng-app="spafelizApp"
+    ng-style="{ 'background': 'url(https://st.depositphotos.com/2095609/4002/i/950/depositphotos_40028483-stock-photo-spa-candles-with-dried-flowers.jpg)' }">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -50,6 +51,8 @@
         <script src="scripts/controllers/reserve.js"></script>
         <script src="scripts/services/spaservices.factory.js"></script>
         <script src="scripts/services/servicedetail.factory.js"></script>
+        <script src="scripts/services/spaservices.service.js"></script>
+        <script src="scripts/services/httpconfig.constant.js.js"></script>
         <!-- endbuild -->
 </body>
 </html>
