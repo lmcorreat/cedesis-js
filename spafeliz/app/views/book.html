@@ -1,0 +1,51 @@
+<div class="container">
+  <form class="form-horizontal" ng-submit="bookCtrl.submitBook()">
+    <div class="form-group">
+      <label for="nombre" class="col-sm-2 control-label">Nombre completo</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="nombre" placeholder="Escriba su nombre"
+          ng-model="bookCtrl.form.name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail3" class="col-sm-2 control-label">Correo</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email"
+          ng-model="bookCtrl.form.email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fecha" class="col-sm-2 control-label">Fecha</label>
+      <div class="col-sm-10">
+        <input type="time" class="form-control" id="fechaT" placeholder="Seleccione la fecha"
+          ng-model="bookCtrl.form.fecha">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fechaD" class="col-sm-2 control-label">Hora</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" id="fechaD" placeholder="Seleccione la Hora"
+          ng-model="bookCtrl.form.hora">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="selTipoServicio" class="col-sm-2 control-label">Tipo Servicio</label>
+      <div class="col-sm-10">
+          <select  id="selTipoServicio" ng-model="bookCtrl.form.service_selected" class="form-control">
+           <option ng-value="{{item.id}}" ng-repeat="item in bookCtrl.serviceList">
+             {{item.name}}
+            </option>
+          </select>
+          <!-- <option>x</option>
+          <option>y</option>
+          <option>z</option> -->
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Reservar</button>
+      </div>
+    </div>
+  </form>
+
+</div>

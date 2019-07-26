@@ -35,9 +35,17 @@ function settings($stateProvider){
     controller:'ReserveCtrl as rsvCtrl'
   }
 
+  var bookState = {
+    name:'home.book',//se deben cambiar las referencias tambien
+    url:'/book',
+    templateUrl:'views/book.html',
+    controller:'BookCtrl as bookCtrl'
+  }
+
   //matricular los estados
   $stateProvider.state(homeState);
   $stateProvider.state(mainState);
   $stateProvider.state(aboutState);
   $stateProvider.state(reserveState);
+  $stateProvider.state(bookState);
 }

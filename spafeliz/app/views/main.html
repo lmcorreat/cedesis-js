@@ -3,10 +3,12 @@
     <img src="{{item.image}}" alt="{{item.cost}}">      
     <div class="carousel-caption">
       <div class="content-service">
-        <h4>{{ item.name }}</h4>
+        <h4>{{ item.name | uppercase }}</h4>
         <p>{{ item.description }}</p>
+        <p>{{ 2000 | currencyFormat}}</p>
         <a ui-sref="home.reserve({id:item.id})">COP {{ item.cost }}</a>
       </div>
     </div>
+    <br><br>
   </div>
 </div>
