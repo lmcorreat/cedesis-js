@@ -44,7 +44,7 @@ function settings($stateProvider){
 
   var bookOtherState = {
     name:'home.bookother',//se deben cambiar las referencias tambien
-    url:'/bookother',
+    url:'/bookother?id',
     templateUrl:'views/bookother.html',
     controller:'BookotherCtrl as bookOtherCtrl'
   }

@@ -22,10 +22,13 @@
     </div>
     <div class="form-group">
       <label for="selTipoServicio">Tipo Servicio</label>
-          <select  id="selTipoServicio" ng-model="bookOtherCtrl.form.service_selected" class="form-control">
-           <option ng-value="{{item.id}}" ng-repeat="item in bookOtherCtrl.serviceList">
-             {{item.name}}
-            </option>
+      <!-- ng-options="item.id as item.name for item in bookOtherCtrl.serviceList" -->
+          <select id="selTipoServicio" ng-model="bookOtherCtrl.form.service_selected" 
+              
+              class="form-control">
+              <option ng-repeat="item in bookOtherCtrl.serviceList" value="{{item.id}}">
+                {{item.name}}
+              </option>
           </select>
     </div>
     <div class="form-group">

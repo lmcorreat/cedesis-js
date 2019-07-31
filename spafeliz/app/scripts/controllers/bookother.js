@@ -10,9 +10,9 @@
 angular.module('spafelizApp')
   .controller('BookotherCtrl', bookotherCtrl);  
 
-bookotherCtrl.$inject = ['spaServicesHttp','spaBooking'];
+bookotherCtrl.$inject = ['spaServicesHttp','spaBooking','$stateParams'];
   
-function bookotherCtrl(spaServicesHttp,spaBooking) {
+function bookotherCtrl(spaServicesHttp,spaBooking,$stateParams) {
   var ctx = this;  
   ctx.form = {};
   ctx.submitBookOther = submitBookOther;
@@ -30,9 +30,10 @@ function bookotherCtrl(spaServicesHttp,spaBooking) {
   }
 
  function loadSpaServicesHttp(){
-    spaServicesHttp.getAll()
+    return spaServicesHttp.getAll()
     .then(function(result){
       ctx.serviceList = result.data;
+      ctx.form.service_selected = $stateParams.id;
     })
     .catch(function(err){
       console.log(err);
