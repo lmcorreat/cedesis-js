@@ -1,0 +1,38 @@
+<div class="container">
+  <form role="form" ng-submit="bookOtherCtrl.submitBookOther()">
+    <div class="form-group">
+      <label for="nombre">Nombre completo</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Escriba su nombre"
+          ng-model="bookOtherCtrl.form.name">
+    </div>
+    <div class="form-group">
+      <label for="inputEmail3">Correo</label>
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email"
+          ng-model="bookOtherCtrl.form.email">
+    </div>
+    <div class="form-group">
+      <label for="fecha">Fecha</label>
+        <input type="date" class="form-control" id="fechaT" placeholder="Seleccione la fecha"
+          ng-model="bookOtherCtrl.form.fecha">
+    </div>
+    <div class="form-group">
+      <label for="fechaD">Hora</label>
+        <input type="time" class="form-control" id="fechaD" placeholder="Seleccione la Hora"
+          ng-model="bookOtherCtrl.form.hora">
+    </div>
+    <div class="form-group">
+      <label for="selTipoServicio">Tipo Servicio</label>
+          <select  id="selTipoServicio" ng-model="bookOtherCtrl.form.service_selected" class="form-control">
+           <option ng-value="{{item.id}}" ng-repeat="item in bookOtherCtrl.serviceList">
+             {{item.name}}
+            </option>
+          </select>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-10 col-sm-10">
+        <button type="submit" class="btn btn-primary">Reservar</button>
+      </div>
+    </div>
+  </form>
+
+</div>

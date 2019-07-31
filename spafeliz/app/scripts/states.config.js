@@ -42,10 +42,18 @@ function settings($stateProvider){
     controller:'BookCtrl as bookCtrl'
   }
 
+  var bookOtherState = {
+    name:'home.bookother',//se deben cambiar las referencias tambien
+    url:'/bookother',
+    templateUrl:'views/bookother.html',
+    controller:'BookotherCtrl as bookOtherCtrl'
+  }
+
   //matricular los estados
   $stateProvider.state(homeState);
   $stateProvider.state(mainState);
   $stateProvider.state(aboutState);
   $stateProvider.state(reserveState);
   $stateProvider.state(bookState);
+  $stateProvider.state(bookOtherState);
 }

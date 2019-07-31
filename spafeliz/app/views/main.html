@@ -2,11 +2,11 @@
   <div class="item active">
     <img src="{{item.image}}" alt="{{item.cost}}">      
     <div class="carousel-caption">
-      <div class="content-service">
+      <div>
         <h4>{{ item.name | uppercase }}</h4>
         <p>{{ item.description }}</p>
-        <p>{{ 2000 | currencyFormat}}</p>
         <a ui-sref="home.reserve({id:item.id})">COP {{ item.cost }}</a>
+        <button ui-sref="home.bookother({id:item.id})" type="button" class="btn btn-link">Reservar</button>
       </div>
     </div>
     <br><br>

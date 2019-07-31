@@ -27,7 +27,7 @@ function fnBookCtrl(spaServicesHttp) {
   }
 
   function submitBook(){
-    console.log('',ctx.form);
+    console.log('hola',ctx.form);
   }
 
   function loadSpaServicesHttp(){
