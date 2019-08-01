@@ -35,7 +35,7 @@ function fnSpaBooking($http,$q,httpConfig) {
     });
 
     function sucess(data){
-      console.log('exitoso',data);
+      data.msg = 'Reservado exitosamente';
       defered.resolve(data);
     }
 

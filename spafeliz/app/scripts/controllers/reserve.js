@@ -24,7 +24,7 @@ function fnReserveCtrl(serviceDetail,$stateParams,spaServicesHttp){// No pasar e
     ctx.loadserviceDetailById = loadserviceDetailById;
     ctx.reserve = reserve;
     ctx.user = 'Fist';
-    ctx.msgOk = 'Reservado Exitosamente!';
+    ctx.msgOk = 'Gracias por tu interés!';
     ctx.showMsg = false;
   
     function onInit(){
@@ -34,14 +34,12 @@ function fnReserveCtrl(serviceDetail,$stateParams,spaServicesHttp){// No pasar e
 
     function loadserviceDetail(){
       ctx.serviceListDetail = serviceDetail.getDetail();
-      console.log(ctx.serviceListDetail);
     }
 
     function loadserviceDetailById(){
       spaServicesHttp.getById($stateParams.id)
         .then(function(result){
           ctx.servicio = result.data;
-          console.log(ctx.servicio);
         }).catch(function(err){
           console.log(err);
         });

@@ -17,6 +17,7 @@ function bookotherCtrl(spaServicesHttp,spaBooking,$stateParams) {
   ctx.form = {};
   ctx.submitBookOther = submitBookOther;
   ctx.loadSpaServicesHttp = loadSpaServicesHttp;
+  ctx.showMsg = false;
 
   ctx.$onInit = onInit;
   ctx.saveBookHttp = saveBookHttp;
@@ -50,7 +51,9 @@ function bookotherCtrl(spaServicesHttp,spaBooking,$stateParams) {
 
     spaBooking.postSave(data)
       .then(function(result){
-        //console.log(result.data);
+        ctx.msg = result.msg;
+        ctx.form = {};
+        setTimeout(ctx.showMsg = !ctx.showMsg, 200);
       })
       .catch(function(err){
         console.log(err);
